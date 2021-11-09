@@ -5,7 +5,7 @@ const Layout = () => {
 
     return ( 
       
-      <h1>Guayerd Bikes</h1>
+      <h1>guayer</h1>
 
      );
 }
