@@ -1,6 +1,6 @@
 import { Navbar,Container } from "react-bootstrap";
 import style from "./NavBar.module.css";
-import Rutas from "../../routes/Rutas";
+import Rutas from "../../routes/index.routes";
 import {Link} from 'react-router-dom';
 
 const NavBar = () => {
