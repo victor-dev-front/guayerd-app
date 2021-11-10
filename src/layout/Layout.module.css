@@ -1,3 +1,13 @@
+:root{
+    /*fuentes*/
+    --fuenteLogo :'Alfa Slab One', cursive;
+    --fuenteTitulo:'Taviraj', serif;
+
+    /*colores*/
+    --blanco: #fff;
+    --colorPrimario: #07075e;
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -18,4 +28,3 @@ html {
       max-width: 120rem;
       margin: 0 auto;
   }
-  

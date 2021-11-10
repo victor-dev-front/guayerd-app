@@ -1,0 +1,81 @@
+
+/*logo de la empresa*/
+.logo{
+    font-family: var(--fuenteLogo);
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--colorPrimario);
+    text-decoration: none;
+
+    /*posiciono logo*/
+    position: absolute;
+    top: -.6rem;
+
+    /*posiciono final del logo*/
+    position: relative;
+}
+
+.logo:hover{
+    color: var(--colorPrimario);
+}
+ /*texto logo*/
+.logo span{
+    color: var(--blanco);
+    font-size: 2rem;
+
+    /*posiciono final del logo*/
+    position: absolute;
+    bottom: -1.1rem ;
+    left: 10.2rem;
+}
+
+/****navegacion*****/
+
+/*navbar*/
+.navbar{
+    overflow: hidden;
+    background: radial-gradient(circle, rgba(137,205,221,1) 22%, rgba(55,104,173,1) 100%);
+    padding: 1.5rem 0;
+    position: relative;
+}
+
+/*links*/
+.nav{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.link{
+    font-family: var(--fuenteTitulo);
+    font-size: 2rem;
+    font-weight: 500;
+    color:var(--colorPrimario);
+    text-decoration: none;
+}
+.link:hover{
+    color: var(--blanco);
+}
+
+.boton{
+    background-color: var(--colorPrimario);
+    border: 1px solid var(--blanco);
+    border-radius: .4rem;
+}
+
+@media (min-width:992px){
+    .nav{
+        margin-top: 0;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .link{
+        font-size: 2.5rem;
+        margin: 0 4rem 0 0;
+    }
+
+    .link:last-of-type{
+        margin-right: 0;
+    }
+}

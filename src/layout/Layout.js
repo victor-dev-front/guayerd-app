@@ -1,12 +1,15 @@
-import 'normalize.css'; 
-import style from "./Layout.module.css"
+
+import { ThemeProvider } from '../context/themeContext';
+import { BrowserRouter as Routes } from 'react-router-dom';
+import style from "./Layout.module.css";
 
 const Layout = () => {
 
     return ( 
-      
-      <h1>guayer</h1>
-
+      <Routes>
+        <ThemeProvider>
+        </ThemeProvider>
+      </Routes>
      );
 }
  
