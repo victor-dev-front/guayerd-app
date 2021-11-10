@@ -1,9 +1,9 @@
-import {Carousel,Container} from "react-bootstrap";
-import {useContext} from "react";
+import { useContext } from "react";
 import DataContext from "../../context/DataContext";
+import {Carousel,Container} from "react-bootstrap";
 
 const Main = () => {
-
+  
     const {productos} = useContext(DataContext);
     return ( 
 
@@ -12,7 +12,7 @@ const Main = () => {
                 <Carousel.Item interval={1000}>
                     <img
                     className="d-block w-100"
-                    src="holder.js/800x400?text=First slide&bg=373940"
+                   // src=
                     alt="First slide"
                     />
                     <Carousel.Caption>
@@ -20,7 +20,7 @@ const Main = () => {
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item interval={700}>
+                <Carousel.Item interval={500}>
                     <img
                     className="d-block w-100"
                     src="holder.js/800x400?text=Second slide&bg=282c34"

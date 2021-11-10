@@ -1,0 +1,17 @@
+
+.section2{
+    padding: 3rem 0;
+   background-color: #F5F7FC;
+}
+
+.subTitulo{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--fuenteTitulo);
+    margin-bottom: 2rem;
+}
+
+li{
+    font-size: 1.5rem;
+    line-height: .2rem;
+}
