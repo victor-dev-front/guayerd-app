@@ -11,6 +11,8 @@ const DataProvider = ({children}) => {
     
     const setData = ()=> getBanner(setBanner); 
     const setData2 = () => getProductos(setProductos);
+
+    
     useEffect(() => {
       setData();
       setData2();

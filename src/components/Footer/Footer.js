@@ -10,9 +10,9 @@ const Footer = () => {
         <h2 className={style.footer__title}>Guayerd Bikes - Bicicletas de Competición y Urbanas.</h2>
         <section className={style.footer__copy}>
           <div className={style.footer__social}>
-            <a href="#" className={style.footer__icons}><FaFacebook /></a>
-            <a href="#" className={style.footer__icons}><FaWhatsapp /></a>
-            <a href="#" className={style.footer__icons}> <FaInstagram /></a>
+            <a href="#!" className={style.footer__icons}><FaFacebook /></a>
+            <a href="#!" className={style.footer__icons}><FaWhatsapp /></a>
+            <a href="#!" className={style.footer__icons}> <FaInstagram /></a>
           </div>
           <h5 className={style.footer__copyright}>Derechos reservados &copy; Guayerd Bikes 2021</h5>
         </section>

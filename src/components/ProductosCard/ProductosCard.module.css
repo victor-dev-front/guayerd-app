@@ -1,0 +1,23 @@
+
+.title{
+    
+    font-weight: 600;
+}
+
+.price{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.stock{
+    font-size: 1.5rem;
+}
+.descuento{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: green;
+}
+

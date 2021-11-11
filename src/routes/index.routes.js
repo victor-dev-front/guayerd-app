@@ -1,5 +1,5 @@
  import Home from "../pages/home/Home";
- import Productos from "../pages/productos/Productos";
+ import Productos from "../pages/productos/Productos.jsx";
  import Contacto from "../pages/contacto/Contacto";
  import {Route,Routes} from 'react-router-dom';
 
