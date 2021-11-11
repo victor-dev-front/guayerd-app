@@ -25,4 +25,8 @@ html {
 *:after {
   box-sizing: inherit;
 }
+/*globales*/
+img {
+  max-width: 100%;
+}
 
