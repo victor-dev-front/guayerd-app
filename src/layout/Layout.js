@@ -1,14 +1,12 @@
-
-import { ThemeProvider } from '../context/themeContext';
+import Navbar  from '../components/navBar/NavBar';
 import { BrowserRouter as Routes } from 'react-router-dom';
-import style from "./Layout.module.css";
+import  "./Layout.css";
 
 const Layout = () => {
 
     return ( 
       <Routes>
-        <ThemeProvider>
-        </ThemeProvider>
+         <Navbar />
       </Routes>
      );
 }
