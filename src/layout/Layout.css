@@ -1,11 +1,11 @@
-:root{
-    /*fuentes*/
-    --fuenteLogo :'Alfa Slab One', cursive;
-    --fuenteTitulo:'Taviraj', serif;
+:root {
+  /*fuentes*/
+  --fuenteLogo: "Alfa Slab One", cursive;
+  --fuenteTitulo: "Taviraj", serif;
 
-    /*colores*/
-    --blanco: #fff;
-    --colorPrimario: #07075e;
+  /*colores*/
+  --blanco: #fff;
+  --colorPrimario: #07075e;
 }
 
 html {
@@ -13,18 +13,16 @@ html {
     font-size: 62.5%;
     
   }
-body{
-    overflow-x: hidden;
-}
+
   *,
   *:before,
   *:after {
       box-sizing: inherit;
   }
 
-  /*globales*/
-  img{
-      max-width: 100%;
-  }
-
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
