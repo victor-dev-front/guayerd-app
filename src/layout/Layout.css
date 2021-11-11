@@ -5,7 +5,8 @@
 
   /*colores*/
   --blanco: #fff;
-  --colorPrimario: #07075e;
+  --colorPrimario: #212C65;
+  --colorSecondary: #01A1DD;
 }
 
 html {
@@ -29,4 +30,15 @@ html {
 img {
   max-width: 100%;
 }
-
+.img{
+  transition: all .2s ease;
+}
+.img:hover{
+  transform: scale(1.1);
+}
+h1{
+  font-size: 4rem;
+  padding-left: 10rem;
+  font-weight: bold;
+  color: var(--colorPrimario);
+}

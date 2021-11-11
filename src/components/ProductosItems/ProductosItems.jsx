@@ -11,7 +11,7 @@ const ProductosItems = () => {
 
   return (
     <>
-      <h1>Productos</h1>
+      <h1 className="title" >Productos</h1>
       <Row xs={1} md={2} className="g-8 w-75 h-50  p-3 mx-auto">
         {productos.map((p) => (
           <ProductosCard
