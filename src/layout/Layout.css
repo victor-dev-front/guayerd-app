@@ -38,7 +38,9 @@ img {
 }
 h1{
   font-size: 4rem;
-  padding-left: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
   color: var(--colorPrimario);
 }
