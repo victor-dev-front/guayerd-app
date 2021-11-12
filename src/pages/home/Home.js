@@ -1,5 +1,5 @@
 import Header from "../../components/header/Header";
-import Main from "../../components/main/Main";
+import Section from "../../components/section/Section";
 import { Container } from "react-bootstrap";
 
 
@@ -7,9 +7,7 @@ import { Container } from "react-bootstrap";
      return (
          <> 
             <Header />
-            <Container> 
-                <Main />
-            </Container>
+            <Section /> 
          </>
       );
  }

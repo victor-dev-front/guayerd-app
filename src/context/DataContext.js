@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState} from "react";
-import { getBanner, getProductos } from "../services/data";
+import { getBanner } from "../services/bannerApi";
+import { getProductos } from "../services/productosApi";
 
 const DataContext = createContext();
 
@@ -7,12 +8,15 @@ const DataProvider = ({children}) => {
 
     const [banner, setBanner] = useState("");
     const [productos, setProductos] = useState([]);
-    console.log(productos);
+    
+    const setData = ()=> getBanner(setBanner); 
+    const setData2 = () => getProductos(setProductos);
     useEffect(() => {
-       getBanner(setBanner);
-       getProductos(setProductos);
-      
+      setData();
+      setData2();
     }, [])
+
+  
 
     const values = { banner,productos};
     return (
