@@ -1,27 +1,24 @@
 import { Container } from "react-bootstrap";
 import styles from "./Section.module.css";
+import { BsCheck2Square } from "react-icons/bs";
 const Section = () => {
     return ( 
-        <div className={styles.section2}>
+        <div className={styles.section}>
             <Container>
                <h2 className={styles.subTitulo}>¿Por que elegirnos?</h2>
                <ul>
-                    <li>Te brindaremos un asesoramiento de primer nivel <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#6BA8CB" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M5 12l5 5l10 -10" />
-                        </svg>
+                    <li>
+                        <p>Te brindaremos un asesoramiento de primer nivel. <span className={styles.colorIcono}><BsCheck2Square/></span></p>
                     </li>
-                    <li>Nuestros productos se exportan y venden en 77 paises <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#6BA8CB" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M5 12l5 5l10 -10" />
-                        </svg>
+                    <li>
+                        <p>Nuestros productos se exportan y se venden en 77 paises. <span className={styles.colorIcono}><BsCheck2Square/></span></p>
                     </li>
-                    <li>Cada bicicleta que se ofrece al publico, esta echa con materia de primera calidad <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#6BA8CB" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M5 12l5 5l10 -10" />
-                        </svg>
+                    <li>
+                        <p>Cada bicicleta que se ofrece al publico esta echa con materia prima de primera calidad. <span className={styles.colorIcono}><BsCheck2Square/></span> </p>
                     </li>
-                    <li></li>
+                    <li>
+                        <p>En GUAYERD nos aseguramos que cada bicicleta que esta en camino a su nuevo dueño, sea unica y tengo el mayor cuidado en su fabricacion. <span className={styles.colorIcono}><BsCheck2Square/></span></p>
+                    </li>
                </ul>
              </Container>
         </div>

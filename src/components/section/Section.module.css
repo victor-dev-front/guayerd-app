@@ -1,9 +1,10 @@
 
-.section2{
+.section{
     padding: 3rem 0;
    background-color: #F5F7FC;
 }
 
+/*subtitulo*/
 .subTitulo{
     font-size: 2rem;
     font-weight: bold;
@@ -11,7 +12,86 @@
     margin-bottom: 2rem;
 }
 
+/*listas*/
 li{
-    font-size: 1.5rem;
-    line-height: .2rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+
+/*estilos a los iconos*/
+.colorIcono{
+    color: #558dbf;
+    font-size: 2rem;
+}
+
+
+@media(min-width:480px){
+
+    /*subtitulo*/
+    .subTitulo{
+        font-size: 2.2rem;
+    }
+    
+    /*listas*/
+    li{
+        font-size: 1.7rem;
+        line-height: 1.6rem;
+    }
+    li p{
+        line-height: 2rem;  
+    }
+    
+    /*estilos a los iconos*/
+    .colorIcono{
+        font-size: 2.5rem;
+    }  
+
+}
+
+@media(min-width:768px){
+
+    /*subtitulo*/
+    .subTitulo{
+        font-size: 2.4rem;
+    }
+    
+    /*listas*/
+    li{
+        font-size: 1.9rem;
+        line-height: 1.6rem;
+    }
+
+    li p{
+        line-height: 2.3rem;  
+    }
+    
+    /*estilos a los iconos*/
+    .colorIcono{
+        font-size: 2.3rem;
+    }  
+
+}
+
+@media(min-width:1140px){
+
+    /*subtitulo*/
+    .subTitulo{
+        font-size: 2.7rem;
+    }
+    
+    /*listas*/
+    li{
+        font-size: 2rem;
+        line-height: 1.6rem;
+    }
+
+    li p{
+        line-height: 2.5rem;  
+    }
+    
+    /*estilos a los iconos*/
+    .colorIcono{
+        font-size: 2.6rem;
+    }  
+
 }
