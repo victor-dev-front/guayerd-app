@@ -9,17 +9,24 @@
 }
 
 html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+  }
+
+  *,
+  *:before,
+  *:after {
+      box-sizing: inherit;
+  }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
-
 /*globales*/
 img {
   max-width: 100%;
 }
+
