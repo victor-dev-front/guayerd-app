@@ -1,0 +1,109 @@
+
+/*fondo*/
+.fondo{
+  background-image:  url("../../assets/img/fondo.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right right;
+
+}
+
+/*tamaño del carosuel*/
+.Carousel{
+    max-width: 100%;
+}
+
+/*subtitulo de cada bici*/
+.infoBici h3{
+    margin-top: .2rem;
+    font-size: 1.2rem;
+}
+
+/*link de direccion a productos*/
+.btn{
+    margin-bottom: .2rem;
+    display: inline-block;
+    font-size: 1rem;
+    padding: .2rem 1rem;
+    border: 1px solid #4276b4;
+    border-radius: 3px;
+    text-decoration: none;
+    color: var(--blanco);
+    background-color: #5e98c4;
+}
+
+.btn:hover{
+    color: var(--blanco);
+    background-color: #477cb7;
+}
+
+@media(min-width:480px){
+    /*subtitulo de cada bici*/
+    .infoBici h3{
+        margin-top: .2rem;
+        font-size: 1.5rem;
+    }
+    
+    .btn{
+        margin-bottom: 1rem;
+        display: inline-block;
+        font-size: 1.3rem;
+        padding: .2rem 1rem;
+        border: 1px solid #4276b4;
+        border-radius: 3px;
+        text-decoration: none;
+        color: var(--blanco);
+        background-color: #5e98c4;
+    }
+}
+
+@media(min-width:768px){
+    .Carousel{
+        max-width: 100%;
+    }
+    
+    
+    /*subtitulo de cada bici*/
+    .infoBici h3{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .btn{
+        margin-bottom: 1rem;
+        display: inline-block;
+        font-size: 1.4rem;
+        padding: .4rem 1.8rem;
+        border: 1px solid #4276b4;
+        border-radius: 3px;
+        text-decoration: none;
+        color: var(--blanco);
+        background-color: #5e98c4;
+    }
+}
+
+@media(min-width:1140px){
+    .Carousel{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+    
+    /*subtitulo de cada bici*/
+    .infoBici h3{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .btn{
+        margin-bottom: 1rem;
+        display: inline-block;
+        font-size: 1.7rem;
+        padding: .4rem 2rem;
+        border: 1px solid #4276b4;
+        border-radius: 3px;
+        text-decoration: none;
+        color: var(--blanco);
+        background-color: #5e98c4;
+    }
+}

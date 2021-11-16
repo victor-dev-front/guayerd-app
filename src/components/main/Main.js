@@ -1,14 +1,17 @@
 import { useContext } from "react";
+import {Link} from 'react-router-dom';
 import DataContext from "../../context/DataContext";
 import {Carousel,Container} from "react-bootstrap";
+import styles from "./Main.module.css";
 
 const Main = () => {
-  
+
     const {productos} = useContext(DataContext);
     console.log(productos);
-    return ( 
+    return (
+        <div className={styles.fondo}>
           <Container>
-            <Carousel>
+            <Carousel className={styles.Carousel}>
                 {
                  productos.map((producto,i) => {
                      if(i === 0){
@@ -19,9 +22,9 @@ const Main = () => {
                             src={producto.imgUrl}
                             alt={producto.title}
                             />
-                                <Carousel.Caption>
+                                <Carousel.Caption className={styles.infoBici}>
                                 <h3>{producto.title}</h3>
-                                <button>VER MAS</button>
+                                <Link className={styles.btn} to="/productos">VER MAS</Link>
                                 </Carousel.Caption>
                             </Carousel.Item>  
                          );
@@ -33,9 +36,9 @@ const Main = () => {
                             src={producto.imgUrl}
                             alt={producto.title}
                             />
-                                <Carousel.Caption>
+                                <Carousel.Caption className={styles.infoBici}>
                                 <h3>{producto.title}</h3>
-                                <button>VER MAS</button>
+                                <Link className={styles.btn} to="/productos">VER MAS</Link>
                                 </Carousel.Caption>
                             </Carousel.Item>    
                          );
@@ -47,9 +50,9 @@ const Main = () => {
                             src={producto.imgUrl}
                             alt={producto.title}
                             />
-                                <Carousel.Caption>
+                                <Carousel.Caption className={styles.infoBici}>
                                 <h3>{producto.title}</h3>
-                                <button>VER MAS</button>
+                                <Link className={styles.btn} to="/productos">VER MAS</Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
                          );
@@ -59,7 +62,8 @@ const Main = () => {
                  )    
                 }
             </Carousel>
-         </Container>
+          </Container>
+        </div> 
      );
 }
  

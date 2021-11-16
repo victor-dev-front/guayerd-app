@@ -58,7 +58,7 @@
 }
 
 .boton{
-    background-color: var(--colorPrimario);
+    background-color: #f5f7fc;
     border: 1px solid var(--blanco);
     border-radius: .4rem;
 }
