@@ -6,16 +6,37 @@ form {
   padding: 1rem;
   box-shadow: 0px 0px 10px 2px #212c65;
   border-radius: 2rem;
+  /* background-color: #c9d6ff; */
+  background-color: rgba(205, 221, 218, 0.925);
+  opacity: 0.9;
 }
 
 .container {
-  background: #c9d6ff;
+  /* background: #c9d6ff;
   background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);
-  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff); */
+  background-image: url("../../assets/img/imagen_contacto.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: round;
+}
+
+.container:before {
+  content: "";
+  width: 100%;
+  height: 100%;
 }
 
 .mapa {
   padding: 2rem 0rem 0rem 0rem;
+}
+
+.container__mapa {
+  background: #c9d6ff;
+  background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  padding: 0 5rem;
 }
 
 .map__responsive {
