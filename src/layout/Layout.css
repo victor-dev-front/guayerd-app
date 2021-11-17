@@ -5,7 +5,8 @@
 
   /*colores*/
   --blanco: #fff;
-  --colorPrimario: #07075e;
+  --colorPrimario: #212C65;
+  --colorSecondary: #01A1DD;
 }
 
 html {
@@ -20,11 +21,6 @@ html {
       box-sizing: inherit;
   }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
 /*globales*/
 img {
   max-width: 100%;

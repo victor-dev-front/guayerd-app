@@ -1,16 +1,20 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import style from "../form/Form.module.css";
 
 // Formulario
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { TextField, Button } from "@material-ui/core";
+import { Grid, TextField, Button, Typography } from "@material-ui/core";
 
-const validarNombre = new RegExp("^[a-zA-Z ]+$");
+// Expresiones regulares para validaciones.
+const validarNombre = new RegExp(
+  "^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$"
+);
 const validarTelefono =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
+// Esquema de validación con yup.
 const validationSchema = yup.object({
   nombre: yup
     .string()
@@ -19,7 +23,7 @@ const validationSchema = yup.object({
     .max(40, "* El nombre no puede tener más de 40 caracteres"),
   email: yup
     .string()
-    .required("* El mail es obligatorio")
+    .required("* El email es obligatorio")
     .email("* Debe ingresar un mail válido")
     .min(10, "* El email ingresado no puede tener menos de 10 caracteres")
     .max(30, "* El email ingresado no puede tener más de 30 caracteres"),
@@ -82,10 +86,19 @@ const Form = () => {
 
   return (
     <>
-      <form onSubmit={formik.handleSubmit} autoComplete="off">
-        <Container>
+      <Grid
+        container
+        direction="column"
+        justify="center"
+        alignContent="center"
+        wrap="nowrap"
+        className={style.container}
+      >
+        <form onSubmit={formik.handleSubmit} autoComplete="off">
+          {/* <Container className={style.container}> */}
+          {/* <Container> */}
+          <h2 className={style.contacto}>Contáctanos!</h2>
           <TextField
-            fullWidth="30"
             id="nombre"
             name="nombre"
             label="Nombre"
@@ -96,20 +109,23 @@ const Form = () => {
             onChange={formik.handleChange}
             error={formik.touched.nombre && Boolean(formik.errors.nombre)}
             helperText={formik.touched.nombre && formik.errors.nombre}
-            FormHelperTextProps={{ style: { fontSize: 12 } }}
-            inputProps={{ style: { fontSize: 15 } }} // font size of input text
+            FormHelperTextProps={{
+              style: { fontSize: 12, fontWeight: "bold" }
+            }}
+            inputProps={{
+              style: { fontSize: 15, fontWeight: "bold" }
+            }} // font size of input text
             InputLabelProps={{
               style: {
                 paddingTop: 3,
                 fontSize: 15,
-                color: "grey"
+                // color: "grey",
+                color: "black",
+                fontWeight: "bold"
               }
             }} // font size of input label
           />
-          <br />
-          <br />
           <TextField
-            fullWidth="30"
             id="email"
             name="email"
             label="Email"
@@ -120,20 +136,20 @@ const Form = () => {
             onChange={formik.handleChange}
             error={formik.touched.email && Boolean(formik.errors.email)}
             helperText={formik.touched.nombre && formik.errors.email}
-            FormHelperTextProps={{ style: { fontSize: 12 } }}
-            inputProps={{ style: { fontSize: 15 } }} // font size of input text
+            FormHelperTextProps={{
+              style: { fontSize: 12, fontWeight: "bold" }
+            }}
+            inputProps={{ style: { fontSize: 15, fontWeight: "bold" } }} // font size of input text
             InputLabelProps={{
               style: {
                 paddingTop: 3,
                 fontSize: 15,
-                color: "grey"
+                color: "black",
+                fontWeight: "bold"
               }
-            }} // font size of input label
+            }}
           />
-          <br />
-          <br />
           <TextField
-            fullWidth="30"
             id="telefono"
             name="telefono"
             label="Teléfono"
@@ -145,32 +161,30 @@ const Form = () => {
             error={formik.touched.telefono && Boolean(formik.errors.telefono)}
             helperText={formik.touched.nombre && formik.errors.telefono}
             FormHelperTextProps={{
-              style: { fontSize: 12 }
+              style: { fontSize: 12, fontWeight: "bold" }
             }}
-            inputProps={{ style: { fontSize: 15 } }} // font size of input text
+            inputProps={{ style: { fontSize: 15, fontWeight: "bold" } }}
             InputLabelProps={{
               style: {
                 paddingTop: 3,
                 fontSize: 15,
-                color: "grey"
+                color: "black",
+                fontWeight: "bold"
               }
-            }} // font size of input label
+            }}
           />
-          <br />
-          <br />
           <TextField
-            fullWidth="30"
             id="tema"
             select
             label="Tema"
-            // value={tema}
+            //value=""
             // onChange={handleChange}
             values={formik.values.tema}
             onChange={formik.handleChange}
             error={formik.touched.tema && Boolean(formik.errors.tema)}
             helperText={formik.touched.tema && formik.errors.tema}
             FormHelperTextProps={{
-              style: { fontSize: 12 }
+              style: { fontSize: 12, fontWeight: "bold" }
             }}
             SelectProps={{
               native: true
@@ -178,14 +192,15 @@ const Form = () => {
             variant="outlined"
             margin="normal"
             size="small"
-            inputProps={{ style: { fontSize: 12 } }} // font size of input text
+            inputProps={{ style: { fontSize: 12, fontWeight: "bold" } }}
             InputLabelProps={{
               style: {
                 paddingTop: 3,
                 fontSize: 15,
-                color: "grey"
+                color: "black",
+                fontWeight: "bold"
               }
-            }} // font size of input label
+            }}
           >
             {opciones.map((option) => (
               <option key={option.value} value={option.value}>
@@ -193,13 +208,9 @@ const Form = () => {
               </option>
             ))}
           </TextField>
-          <br />
-          <br />
           <TextField
-            fullWidth="30"
             id="consulta"
             label="Ingrese su consulta"
-            // placeholder="Ingrese su consulta"
             multiline
             rows={7}
             values={formik.values.consulta}
@@ -207,7 +218,7 @@ const Form = () => {
             error={formik.touched.consulta && Boolean(formik.errors.consulta)}
             helperText={formik.touched.consulta && formik.errors.consulta}
             FormHelperTextProps={{
-              style: { fontSize: 12 }
+              style: { fontSize: 12, fontWeight: "bold" }
             }}
             SelectProps={{
               native: true
@@ -215,31 +226,62 @@ const Form = () => {
             variant="outlined"
             margin="normal"
             size="normal"
-            inputProps={{ style: { fontSize: 15 } }} // font size of input text
+            inputProps={{
+              style: { fontSize: 15, lineHeight: "100%", fontWeight: "bold" }
+            }}
             InputLabelProps={{
               style: {
                 paddingTop: 3,
                 fontSize: 15,
-                color: "grey"
+                color: "black",
+                fontWeight: "bold"
               }
-            }} // font size of input label
+            }}
           />
-          <br />
-          <br />
-          <br />
-          <Button
-            fullWidth="30"
-            type="submit"
-            variant="outlined"
-            color="default"
-            size="normal"
-          >
-            Enviar
-          </Button>
-          <br />
-          <br />
-        </Container>
-      </form>
+          <Container>
+            <Row className="justify-content-md-center">
+              <Button
+                type="submit"
+                variant="outlined"
+                color="primary"
+                size="normal"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  width: "10rem",
+                  border: "0.1rem solid",
+                  boxShadow: "0px 0px 2px 0.5px #212c65",
+                  borderRadius: "2rem",
+                  marginTop: "1rem"
+                }}
+              >
+                <Typography
+                  variant="h5"
+                  color="initial"
+                  style={{ fontWeight: "bold" }}
+                >
+                  Enviar
+                </Typography>
+              </Button>
+            </Row>
+          </Container>
+        </form>
+      </Grid>
+      <div className={style.container__mapa}>
+        <h2 className={style.mapa}>
+          <span className={style.ubicacion}>Dónde encontrarnos!</span>
+        </h2>
+        <div className={style.map__responsive}>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.512780793885!2d-58.4500563851957!3d-34.59119276434157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5f12e398ecd%3A0x98abf435fbfab70!2sAv.%20Corrientes%206237%2C%20C1427BPA%20CABA!5e0!3m2!1ses-419!2sar!4v1626215769377!5m2!1ses-419!2sar"
+            title="Mapa"
+            width="600"
+            height="450"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      {/* </Grid> */}
     </>
   );
 };

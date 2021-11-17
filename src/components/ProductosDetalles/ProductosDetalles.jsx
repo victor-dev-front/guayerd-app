@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 
+
 //Componente de la ventana modal que muestra los detalles de cada producto
 
-const ProductosDetalles = ({ description, title }) => {
+const ProductosDetalles = ({img, description, title }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -11,14 +12,15 @@ const ProductosDetalles = ({ description, title }) => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button  size="lg" variant="primary" onClick={handleShow}>
         Ver detalles del articulo
       </Button>
 
-      <Modal show={show} onHide={handleClose} animation={true}>
+      <Modal aria-labelledby="contained-modal-title-vcenter" show={show} onHide={handleClose} animation={true}>
         <Modal.Header closeButton>
           <Modal.Title> {title} </Modal.Title>
         </Modal.Header>
+        <img className="img" src={img} alt={title} />
         <Modal.Body> {description} </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClose}>

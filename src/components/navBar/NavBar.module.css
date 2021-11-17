@@ -47,14 +47,15 @@
     align-items: flex-start;
 }
 .link{
-    font-family: var(--fuenteTitulo);
-    font-size: 2rem;
+    
+    font-size: 1.5rem;
     font-weight: 500;
     color:var(--colorPrimario);
     text-decoration: none;
+    transition: 1s;
 }
 .link:hover{
-    color: var(--blanco);
+    color: var(--colorSecondary);
 }
 
 .boton{
