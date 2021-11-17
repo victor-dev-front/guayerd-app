@@ -3,6 +3,7 @@ import Section from "../../components/section/Section";
 import Main from "../../components/main/Main";
 
  const Home = () => {
+    
      return (
          <> 
             <Header />
