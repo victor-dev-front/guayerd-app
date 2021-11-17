@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import ProductosCard from "../ProductosCard/ProductosCard.jsx";
 import DataContext from "../../context/DataContext";
 import { Row } from "react-bootstrap";
+import style from './ProductoItems.module.css'
 
 //Componente del producto, llamando y enviandole las props al componente de las cards
 
@@ -11,7 +12,7 @@ const ProductosItems = () => {
 
   return (
     <>
-      <h1 className="title" >Productos</h1>
+      <h1 className={style.title} >Productos</h1>
       <Row xs={1} md={2} className="g-8 w-75 h-50  p-3 mx-auto">
         {productos.map((p) => (
           <ProductosCard

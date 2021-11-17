@@ -1,0 +1,8 @@
+.title{
+    font-size: 4rem;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: var( --colorPrimario);
+}
