@@ -1,45 +1,42 @@
-
-.title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: var(--colorPrimario);
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--colorPrimario);
 }
 
-.price{
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--colorSecondary);
+.price {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--colorSecondary);
 }
-.stock{
-    font-size: 1.5rem;
+.stock {
+  font-size: 1.5rem;
 }
-.descuento{
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: green;
+.descuento {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: green;
 }
-.tachado{
-    text-decoration: line-through;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--colorSecondary);
+.tachado {
+  text-decoration: line-through;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--colorSecondary);
 }
-.stock{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.espacio{
-    margin-top: 2rem;
+.stock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
+.fondo {
+  background-color: yellow;
+}

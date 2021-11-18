@@ -9,12 +9,11 @@ import CodigoDescuento from "../CodigoDescuento/CodigoDescuento.js";
 
 const ProductosItems = () => {
   const { productos } = useContext(DataContext);
-  
 
   return (
-    <>
-      <h1 className={style.title} >Productos</h1>
-      <Row  xs={1} md={2} className="g-8 w-75 h-50  p-3 mx-auto">
+    <div className={style.fondo}>
+      <h1 className={style.title}>Productos</h1>
+      <Row xs={1} md={2} className="g-8 w-75 h-50  p-3 mx-auto">
         {productos.map((p) => (
           <ProductosCard
             key={p.title}
@@ -29,7 +28,7 @@ const ProductosItems = () => {
         ))}
       </Row>
       <CodigoDescuento/>
-    </>
+    </div>
   );
 };
 
