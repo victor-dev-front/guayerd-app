@@ -1,21 +1,22 @@
-import {Button,Modal,Form} from "react-bootstrap";
-import { useState, useEffect } from "react";
+import {Button,Modal} from "react-bootstrap";
+import { useState } from "react";
+import FormNotificacion from "../formNotificacion/FormNotificacion";
 const Notificacion = () => {
 
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
+    const [estado,setEstado] = useState(false);
   
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    
-    useEffect(() => {
-        handleShow();
-    }, [])
-
-    const Formulario = () =>{
-      
+    const handleClose = () => {
+      setShow(false);
+    };
+   
+    const formulario = () =>{
+      setShow(false);
+      setEstado(true);
     }
 
     return (
+      <>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>¿DESEAS SUSCRIBIRTE?</Modal.Title>
@@ -24,11 +25,13 @@ const Notificacion = () => {
             <Button variant="secondary" onClick={handleClose}>
               NO
             </Button>
-            <Button variant="primary" onClick={Formulario}>
+            <Button variant="primary" onClick={formulario}>
               SI
             </Button>
           </Modal.Footer>
         </Modal>
+        {estado ? <FormNotificacion /> :null}
+      </>
     )
 }
  
