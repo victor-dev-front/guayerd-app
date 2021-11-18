@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import ProductosCard from "../ProductosCard/ProductosCard.jsx";
 import DataContext from "../../context/DataContext";
 import { Row } from "react-bootstrap";
-import style from "./ProductoItems.module.css";
+import style from './ProductoItems.module.css'
+import CodigoDescuento from "../CodigoDescuento/CodigoDescuento.js";
 
 //Componente del producto, llamando y enviandole las props al componente de las cards
 
@@ -26,6 +27,7 @@ const ProductosItems = () => {
           />
         ))}
       </Row>
+      <CodigoDescuento/>
     </div>
   );
 };
