@@ -1,5 +1,8 @@
 /*titulo*/
+
 .titulo {
+  margin-top: 0;
+  padding: 2rem 0 0 0;
   font-family: var(--fuenteTitulo);
   font-size: 2rem;
   font-weight: bold;

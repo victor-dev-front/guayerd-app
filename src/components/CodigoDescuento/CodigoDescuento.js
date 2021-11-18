@@ -1,6 +1,8 @@
 import React from "react";
 import { Modal, Button } from "react-bootstrap";
 import useCodigo from "../../hooks/useCodigo";
+import { BiGift } from "react-icons/bi";
+import style from './CodigoDescuento.module.css'
 
 const CodigoDescuento = () => {
   const [show, handleClose, codigo] = useCodigo();
@@ -9,6 +11,7 @@ const CodigoDescuento = () => {
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
+        <BiGift className={style.icon} />
           <Modal.Title>Codigo promocional</Modal.Title>
         </Modal.Header>
         <Modal.Body>
