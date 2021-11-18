@@ -36,7 +36,7 @@ form {
   background: #c9d6ff;
   background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);
   background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-  padding: 0 5rem;
+  padding: 2rem 5rem;
 }
 
 .map__responsive {
@@ -46,7 +46,6 @@ form {
   height: 0;
   border: 0.2rem solid;
   box-shadow: 0px 0px 10px 2px #212c65;
-  margin: 1rem 0;
   border-radius: 2rem;
 }
 

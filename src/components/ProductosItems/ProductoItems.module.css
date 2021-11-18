@@ -1,8 +1,16 @@
-.title{
-    font-size: 4rem;
-    font-weight: bold;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    color: var( --colorPrimario);
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: var(--colorPrimario);
+  margin: 0;
+  padding: 2rem;
+}
+
+.fondo {
+  background: #c9d6ff;
+  background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
 }
