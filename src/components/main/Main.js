@@ -16,7 +16,7 @@ const Main = () => {
                  productos.map((producto,i) => {
                      if(i === 0){
                          return (
-                            <Carousel.Item interval={1000}>
+                            <Carousel.Item key={producto.title} interval={1000}>
                             <img
                             className="d-block w-100"
                             src={producto.imgUrl}
@@ -30,7 +30,7 @@ const Main = () => {
                          );
                      } else if(i === 1){
                          return (
-                            <Carousel.Item interval={500}>
+                            <Carousel.Item key={producto.title} interval={500}>
                             <img
                             className="d-block w-100"
                             src={producto.imgUrl}
@@ -44,7 +44,7 @@ const Main = () => {
                          );
                      } else if(i === 2){
                          return (
-                            <Carousel.Item>
+                            <Carousel.Item key={producto.title} >
                             <img
                             className="d-block w-100"
                             src={producto.imgUrl}
