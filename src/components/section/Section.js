@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import styles from "./Section.module.css";
 import { BsCheck2Square } from "react-icons/bs";
+import { Link } from "react-router-dom";
 const Section = () => {
   return (
     <div className={styles.section}>
@@ -43,6 +44,11 @@ const Section = () => {
             </p>
           </li>
         </ul>
+        <div className={styles.contenedorBoton}>
+          <Link className={styles.btn} to="/nosotros">
+            MÁS SOBRE NOSOTROS
+          </Link>
+        </div>
       </Container>
     </div>
   );

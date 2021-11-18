@@ -25,6 +25,34 @@ li {
   font-size: 2rem;
 }
 
+/*boton*/
+.contenedorBoton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  padding: 1rem;
+  text-decoration: none;
+  border: 3px solid var(--blanco);
+  color: var(--blanco);
+  border-radius: 20px;
+  width: 200px;
+  margin: 0 auto;
+  /* height: 6rem; */
+  font-size: 1.3rem;
+  font-weight: bold;
+  /* background-color: var(--colorPrimario); */
+  background-color: #558dbf;
+  text-align: center;
+}
+
+.btn:hover {
+  color: black;
+  transition: 0.5s ease-in-out;
+  border: 3px solid black;
+}
+
 @media (min-width: 480px) {
   /*subtitulo*/
   .subTitulo {
