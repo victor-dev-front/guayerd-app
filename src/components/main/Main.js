@@ -1,7 +1,7 @@
-import { useContext } from "react";
-import {Link} from 'react-router-dom';
 import DataContext from "../../context/DataContext";
+import {Link} from 'react-router-dom';
 import {Carousel,Container} from "react-bootstrap";
+import { useContext } from "react";
 import styles from "./Main.module.css";
 
 const Main = () => {

@@ -1,15 +1,15 @@
-import Navbar  from '../components/navBar/NavBar';
-import Footer from '../components/Footer/Footer'
-import { DataProvider } from '../context/DataContext';
 import { BrowserRouter as Routes } from 'react-router-dom';
+import { DataProvider } from '../context/DataContext';
 import  "./Layout.css";
+import {NavBar, Footer}  from '../components';
+
 
 const Layout = () => {
 
     return ( 
       <Routes>
          <DataProvider>
-            <Navbar />
+            <NavBar />
             <Footer />
          </DataProvider>
       </Routes>

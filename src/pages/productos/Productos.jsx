@@ -1,4 +1,4 @@
-import ProductosItems from '../../components/ProductosItems/ProductosItems.jsx'
+import {ProductosItems} from '../../components'
 
 const Productos = () => {
      return (

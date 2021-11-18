@@ -4,7 +4,7 @@ import {Table} from 'react-bootstrap'
 const TablaPremios = () => {
     return (
         <div>
-  <Table responsive="sm" size="lg">
+  <Table responsive="sm" size="md">
     <thead>
       <tr>
         

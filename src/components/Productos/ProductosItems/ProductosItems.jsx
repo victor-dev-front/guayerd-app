@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import ProductosCard from "../ProductosCard/ProductosCard.jsx";
-import DataContext from "../../context/DataContext";
+import DataContext from "../../../context/DataContext";
 import { Row } from "react-bootstrap";
+import {ProductosCard, CodigoDescuento }from "../..";
 import style from './ProductoItems.module.css'
-import CodigoDescuento from "../CodigoDescuento/CodigoDescuento.js";
+
 
 //Componente del producto, llamando y enviandole las props al componente de las cards
 
@@ -14,6 +14,7 @@ const ProductosItems = () => {
     <div className={style.fondo}>
       <h1 className={style.title}>Productos</h1>
       <Row xs={1} md={2} className="g-8 w-75 h-50  p-3 mx-auto">
+    {/* Se realiza el envio de la informacion de la API al componente y el mapeo del componente que contiene la card */}
         {productos.map((p) => (
           <ProductosCard
             key={p.title}
@@ -27,6 +28,7 @@ const ProductosItems = () => {
           />
         ))}
       </Row>
+      {/* Llamado al componente que contiene el modal con el codigo de descuento */}
       <CodigoDescuento/>
     </div>
   );
