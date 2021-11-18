@@ -6,6 +6,8 @@ import style from "../form/Form.module.css";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { Grid, TextField, Button, Typography } from "@material-ui/core";
+import Axios from "axios";
+import Swal from "sweetalert2";
 
 // Expresiones regulares para validaciones.
 const validarNombre = new RegExp(
@@ -78,9 +80,33 @@ const Form = () => {
       tema: "Venta",
       consulta: ""
     },
-    onSubmit: (values) => {
-      console.log(JSON.stringify(values));
+    // onSubmit: (values, { resetForm }) => {
+    //   console.log(JSON.stringify(values));
+    //   // console.log("Submit Props", onSubmitProps);
+    // },
+    onSubmit: async (values, { resetForm }) => {
+      try {
+        let res = await Axios.post(
+          "https://formsubmit.co/ajax/albertodamianlopez@gmail.com",
+          values,
+          { headers: { Accept: "application/json" } }
+        );
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title:
+            "Su consulta se envió con éxito! Le responderemos a la brevedad.",
+          showConfirmButton: false,
+          timerProgressBar: true,
+          timer: 4000
+        });
+        // console.log(res)
+        resetForm();
+      } catch (err) {
+        console.log(err);
+      }
     },
+
     validationSchema: validationSchema
   });
 
@@ -105,6 +131,7 @@ const Form = () => {
             margin="normal"
             variant="outlined"
             size="small"
+            value={formik.values.nombre || ""}
             values={formik.values.nombre}
             onChange={formik.handleChange}
             error={formik.touched.nombre && Boolean(formik.errors.nombre)}
@@ -132,6 +159,7 @@ const Form = () => {
             margin="normal"
             variant="outlined"
             size="small"
+            value={formik.values.email || ""}
             values={formik.values.email}
             onChange={formik.handleChange}
             error={formik.touched.email && Boolean(formik.errors.email)}
@@ -156,6 +184,7 @@ const Form = () => {
             margin="normal"
             variant="outlined"
             size="small"
+            value={formik.values.telefono || ""}
             values={formik.values.telefono}
             onChange={formik.handleChange}
             error={formik.touched.telefono && Boolean(formik.errors.telefono)}
@@ -179,6 +208,7 @@ const Form = () => {
             label="Tema"
             //value=""
             // onChange={handleChange}
+            value={formik.values.tema || ""}
             values={formik.values.tema}
             onChange={formik.handleChange}
             error={formik.touched.tema && Boolean(formik.errors.tema)}
@@ -213,6 +243,7 @@ const Form = () => {
             label="Ingrese su consulta"
             multiline
             rows={7}
+            value={formik.values.consulta || ""}
             values={formik.values.consulta}
             onChange={formik.handleChange}
             error={formik.touched.consulta && Boolean(formik.errors.consulta)}
