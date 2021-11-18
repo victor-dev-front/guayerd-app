@@ -5,21 +5,20 @@
 
   /*colores*/
   --blanco: #fff;
-  --colorPrimario: #212C65;
-  --colorSecondary: #01A1DD;
+  --colorPrimario: #212c65;
+  --colorSecondary: #01a1dd;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-    
-  }
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
 
-  *,
-  *:before,
-  *:after {
-      box-sizing: inherit;
-  }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 /*globales*/
 img {

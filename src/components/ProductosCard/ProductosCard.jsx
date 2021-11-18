@@ -18,7 +18,7 @@ const ProductosCard = ({
     <div className="container d-flex justify-content-center">
       <div className="justify-content-center">
         <Col>
-          <Card className="m-1" style={{ minHeight: "400px" }}>
+          <Card className="m-1 mb-4" style={{ minHeight: "400px" }}>
             <img className="img" src={img} alt={title} />
             <div className="card-body">
               <h3 className={style.title}> {title} </h3>
