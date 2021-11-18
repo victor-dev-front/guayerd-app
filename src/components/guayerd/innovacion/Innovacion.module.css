@@ -1,69 +1,65 @@
-
-.titulo{
-    text-align: center;
-    font-family: var(--fuenteTitulo);
-    font-size: 2rem;
-    font-weight: bold;
+.titulo {
+  text-align: justify;
+  font-family: var(--fuenteTitulo);
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-.parrafo{
-    text-align: center;
-    font-size: 1.2rem;
+.parrafo {
+  text-align: justify;
+  font-size: 1.2rem;
 }
-.imgInnovacion{
-    margin-bottom: 1rem;
-    -webkit-box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.91);
-    -moz-box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.91);
-    box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.91);
-}
-
-@media(min-width:768px){
-    .titulo{
-        font-size: 2.5rem;
-        text-align: left;
-    }
-    .parrafo{
-        text-align: left;
-        font-size: 1.5rem;
-    }
-
-    .contenido{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-
-    }
-    .imgInnovacion{
-        margin-left: 2rem;
-    }
-    .parrafo:last-of-type{
-        margin-left: 2rem;
-    }
-
+.imgInnovacion {
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.91);
+  -moz-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.91);
+  box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.91);
 }
 
-@media(min-width:991px){
-    .titulo{
-        font-size: 3rem;
-        text-align: left;
-    }
-    .parrafo{
-        text-align: left;
-        font-size: 1.7rem;
-    }
+@media (min-width: 768px) {
+  .titulo {
+    font-size: 2.5rem;
+    text-align: justify;
+  }
+  .parrafo {
+    text-align: justify;
+    font-size: 1.5rem;
+  }
 
-    .contenido{
+  .contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .imgInnovacion {
+    margin-left: 2rem;
+  }
+  .parrafo:last-of-type {
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 991px) {
+  .titulo {
+    font-size: 3rem;
+    text-align: justify;
+  }
+  .parrafo {
+    text-align: justify;
+    font-size: 1.7rem;
+  }
+
+  .contenido {
     margin: 1rem;
-    }
-    .parrafo:last-of-type{
-        margin-left: 2rem;
-    }
-    .parrafo:first-of-type{
-       margin-bottom: 2rem;
-    }
-    .imgInnovacion{
-        max-height: 22rem;
-        width: 80%;
-        margin-left: 2.4rem;
-    }
-
+  }
+  .parrafo:last-of-type {
+    margin-left: 2rem;
+  }
+  .parrafo:first-of-type {
+    margin-bottom: 2rem;
+  }
+  .imgInnovacion {
+    max-height: 22rem;
+    width: 80%;
+    margin-left: 2.4rem;
+  }
 }
