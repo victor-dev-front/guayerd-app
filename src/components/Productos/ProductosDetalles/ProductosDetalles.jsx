@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+import PropTypes from 'prop-types'
 
 //Componente de la ventana modal que muestra los detalles de cada producto
 
@@ -34,5 +35,11 @@ const ProductosDetalles = ({ img, description, title }) => {
     </>
   );
 };
+//Se definen las PropTypes de las props que recine este componente.
+ProductosDetalles.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+}
 
 export default ProductosDetalles;

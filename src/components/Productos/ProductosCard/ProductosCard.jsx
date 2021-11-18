@@ -1,6 +1,7 @@
 import React from "react";
 import ProductoDetalles from "../ProductosDetalles/ProductosDetalles";
 import style from "../ProductosCard/ProductosCard.module.css";
+import PropTypes from 'prop-types'
 import { Card, Col } from "react-bootstrap";
 
 //Componente que retorna la card que contiene cada producto
@@ -39,5 +40,14 @@ const ProductosCard = ({ //Se recibe la informacion para renderizarlo en las car
     </div>
   );
 };
+//PropTypes definidas para este componente.
+ProductosCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  discount: PropTypes.number,
+  inStock: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired
+}
 
 export default ProductosCard;
