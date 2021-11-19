@@ -1,6 +1,5 @@
 import {Modal} from "react-bootstrap";
 import { useState } from "react";
-import { Formik } from "formik";
 
 const  FormNotificacion = () => {
     const [show, setShow] = useState(true);
@@ -11,24 +10,9 @@ const  FormNotificacion = () => {
         <>
             <Modal show={show} onHide={handleClose}>
             <Modal.Body>
-                <Formik
-                initialValues={{
-                    nombre:"",
-                    email:""
-                }}
-                onSubmit={(values) =>{
-                    console.log(values)
-                }}
-                >
-                    {
-                        <form>
                             <input/>
                             <input/>
-                            <button>Enviar</button>
-                        </form>
-                    }
-                    
-                </Formik>
+                            <button onClick={handleClose}>Enviar</button>      
             </Modal.Body>
             </Modal>
       </>
