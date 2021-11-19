@@ -9,7 +9,8 @@
   -webkit-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.91);
   -moz-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.91);
   box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.91);
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
+  margin-bottom: 4rem;
 }
 
 .parrafo {
@@ -26,7 +27,8 @@
   .parrafo {
     text-align: justify;
     font-size: 1.5rem;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
+    margin: 0 0.7rem;
   }
   .contenido {
     display: grid;
@@ -57,6 +59,7 @@
   .parrafo {
     text-align: justify;
     font-size: 1.7rem;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
+    padding: 0 0.3rem;
   }
 }

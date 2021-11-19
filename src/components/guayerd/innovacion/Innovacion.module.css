@@ -14,6 +14,7 @@
   -webkit-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.91);
   -moz-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.91);
   box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.91);
+  min-width: 95%;
 }
 
 @media (min-width: 768px) {
@@ -32,6 +33,7 @@
   }
   .imgInnovacion {
     margin-left: 2rem;
+    width: 50%;
   }
   .parrafo:last-of-type {
     margin-left: 2rem;
@@ -48,9 +50,9 @@
     font-size: 1.7rem;
   }
 
-  .contenido {
+  /* .contenido {
     margin: 1rem;
-  }
+  } */
   .parrafo:last-of-type {
     margin-left: 2rem;
   }
