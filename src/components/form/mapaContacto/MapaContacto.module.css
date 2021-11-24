@@ -1,0 +1,35 @@
+.mapa {
+  padding: 2rem 0rem 0rem 0rem;
+}
+
+.container__mapa {
+  background: #c9d6ff;
+  background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  padding: 2rem 5rem;
+}
+
+.map__responsive {
+  overflow: hidden;
+  padding-bottom: 40%;
+  position: relative;
+  height: 0;
+  border: 0.2rem solid;
+  box-shadow: 0px 0px 10px 2px #212c65;
+  border-radius: 2rem;
+}
+
+.map__responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.ubicacion {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  color: #212c65;
+}
